@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *movies;
+@property (nonatomic, strong) UIRefreshControl *refreshControl;
 
 @end
 
@@ -23,8 +24,16 @@
     [super viewDidLoad];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    
-     // Do any additional setup after loading the view.
+   
+    [self fetchMovies];
+  
+     self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector (fetchMovies) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+   
+}
+
+-(void)fetchMovies {
     NSURL *url = [NSURL URLWithString:@"https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10.0];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:[NSOperationQueue mainQueue]];
@@ -34,21 +43,19 @@
         }
         else {
             NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-           
+            
             NSLog(@"%@", dataDictionary);
             
             self.movies = dataDictionary[@"results"];
             for(NSDictionary *movie in self.movies) {
                 NSLog(@"%@", movie[@"title"]);
             }
-            // TODO: Get the array of movies
-            // TODO: Store the movies in a property to use elsewhere
-            // TODO: Reload your table view data
+            
             [self.tableView reloadData];
         }
+        [self.refreshControl endRefreshing];
     }];
     [task resume];
-   
 }
 
 - (void)didReceiveMemoryWarning {
