@@ -44,6 +44,7 @@
             // TODO: Get the array of movies
             // TODO: Store the movies in a property to use elsewhere
             // TODO: Reload your table view data
+            [self.tableView reloadData];
         }
     }];
     [task resume];
@@ -56,7 +57,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.movies.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -66,10 +67,11 @@
     cell.titleLabel.text = movie[@"title"];
     cell.synopsisLabel.text = movie[@"overview"];
     
-    NSString *baseURLString = @"https://image.tmb.org/t/p/w5oo";
+    NSString *baseURLString = @"https://image.tmdb.org/t/p/w500";
     NSString *posterURLString = movie[@"poster_path"];
-    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
-    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+   NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
+   NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
+   [cell.posterLabel setImageWithURL:posterURL];
     
     
     return cell;
