@@ -71,7 +71,8 @@
     NSString *posterURLString = movie[@"poster_path"];
    NSString *fullPosterURLString = [baseURLString stringByAppendingString:posterURLString];
    NSURL *posterURL = [NSURL URLWithString:fullPosterURLString];
-   [cell.posterLabel setImageWithURL:posterURL];
+    cell.posterLabel.image = nil;
+    [cell.posterLabel setImageWithURL:posterURL];
     
     
     return cell;
