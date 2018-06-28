@@ -92,8 +92,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    NSLog(@"Tapping on a movie!");
+    UITableViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+    NSDictionary *movie = self.movies[indexPath.row];
+   
+    DetailViewController *detailViewController[segue destinationViewController];    NSLog(@"Tapping on a movie!");
 }
 
 

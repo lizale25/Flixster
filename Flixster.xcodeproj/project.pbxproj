@@ -166,6 +166,8 @@
 			children = (
 				3E72B04320E45F46000802E1 /* MovieViewController.h */,
 				3E72B04420E45F46000802E1 /* MovieViewController.m */,
+				3E7FC6BF20E5840B0028A045 /* DetailsViewController.h */,
+				3E7FC6C020E5840B0028A045 /* DetailsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -175,8 +177,6 @@
 			children = (
 				3E79E17420E498C60009EE61 /* MovieCell.h */,
 				3E79E17520E498C60009EE61 /* MovieCell.m */,
-				3E7FC6BF20E5840B0028A045 /* DetailsViewController.h */,
-				3E7FC6C020E5840B0028A045 /* DetailsViewController.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
