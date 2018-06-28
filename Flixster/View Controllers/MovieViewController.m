@@ -8,6 +8,7 @@
 
 #import "MovieViewController.h"
 #import "MovieCell.h"
+#import "DetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
 
 @interface MovieViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -96,7 +97,9 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
     NSDictionary *movie = self.movies[indexPath.row];
    
-    DetailViewController *detailViewController[segue destinationViewController];    NSLog(@"Tapping on a movie!");
+    DetailsViewController *detailsViewController  = [segue destinationViewController];
+    detailsViewController.movie = movie;
+  
 }
 
 
