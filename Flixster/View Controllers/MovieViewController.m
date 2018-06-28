@@ -29,8 +29,8 @@
   
      self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector (fetchMovies) forControlEvents:UIControlEventValueChanged];
-    [self.tableView addSubview:self.refreshControl];
-   
+    [self.tableView insertSubview:self.refreshControl atIndex:0];
+    
 }
 
 -(void)fetchMovies {
@@ -85,14 +85,16 @@
     return cell;
     
 }
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    NSLog(@"Tapping on a movie!");
 }
-*/
+
 
 @end
