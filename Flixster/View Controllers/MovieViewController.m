@@ -19,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
-//
+
 @implementation MovieViewController
 
 - (void)viewDidLoad {
