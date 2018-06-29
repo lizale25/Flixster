@@ -40,7 +40,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/a/0zvO8qC' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/jChbZJn' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 ]
 
 
