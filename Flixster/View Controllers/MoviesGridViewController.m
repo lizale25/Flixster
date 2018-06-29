@@ -41,9 +41,11 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    
-    
     [self fetchMovies];
+    
+    UICollectionView *layout = self.collectionView.collectionViewLayout;
+    
+    
     // Do any additional setup after loading the view.
 }
 
