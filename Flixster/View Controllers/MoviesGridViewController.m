@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSArray *movies;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
+
 @end
 
 @implementation MoviesGridViewController
@@ -39,6 +40,8 @@
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    
+    
     
     [self fetchMovies];
     // Do any additional setup after loading the view.
