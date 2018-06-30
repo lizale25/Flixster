@@ -1,50 +1,56 @@
-# Project 2 - *Name of App Here*
+# Project 2 - Flixster
 
-**Name of your app** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+Flixster is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: 16 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-- [ ] User can view a list of movies currently playing in theaters from The Movie Database.
-- [ ] Poster images are loaded using the UIImageView category in the AFNetworking library.
-- [ ] User sees a loading state while waiting for the movies API.
-- [ ] User can pull to refresh the movie list.
+- [X] User can view a list of movies currently playing in theaters from The Movie Database.
+- [X] Poster images are loaded using the UIImageView category in the AFNetworking library.
+- [X] User sees a loading state while waiting for the movies API.
+- [X] User can pull to refresh the movie list.
 
 The following **optional** features are implemented:
 
 - [ ] User sees an error message when there's a networking error.
-- [ ] Movies are displayed using a CollectionView instead of a TableView.
-- [ ] User can search for a movie.
+- [X] Movies are displayed using a CollectionView instead of a TableView. //Both are shown
+- [X] User can search for a movie.
 - [ ] All images fade in as they are loading.
-- [ ] User can view the large movie poster by tapping on a cell.
+- [X] User can view the large movie poster by tapping on a cell //** Goes back to description
 - [ ] For the large poster, load the low resolution image first and then switch to the high resolution image when complete.
 - [ ] Customize the selection effect of the cell.
-- [ ] Customize the navigation bar.
+- [X] Customize the navigation bar. // ** The bottom part of the navigation bar- changed logo
 - [ ] Customize the UI.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [X] Added 5 stars for users to rate their favorite movies
+- [X] Changed color, size, design and font of the app
+- [X] Added labels such as "Print your favorite posters" to make the App more creative
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+
+1. I would like to discuss how to better link view controllers
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/HujJluh.gif[/img].gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+]
+
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+1. Time was the most challenging part of the assignment; I wish I had more time to better understand each component in order to be able to add more of the optional features.
+
+2. Toggling issues were recurrent.
 
 ## Credits
 
